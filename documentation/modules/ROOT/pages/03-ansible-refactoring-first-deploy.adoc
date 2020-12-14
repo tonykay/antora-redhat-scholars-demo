@@ -1,17 +1,4 @@
----
-title: "Ansible Refactoring Part 2 - First Deploy"
-date: 2020-07-20
-linktitle: Ansible Refactoring Series
-slug: "ansible-refactoring-series-part2"
-thumbnail: "images/terminal-refactor-80x12.png"
-categories:
-  - Ansible
-tags:
-  - ansible
-  - refactor
----
-
-== Part 2 - First Deploy
+== First Deploy
 
 
 Now your environment is setup and customized it is time to clone, examine, and run your project repository or _repo_.
@@ -65,6 +52,7 @@ There is also a control node to work from.
 
 image::/images/ntier-app-topology.png[role="thumb center" width=100%]
 
+[#deploy]
 == First Deploy
 
 In the first deploy we will just deploy the repo, or project, _"as is"_ without making any changes.
@@ -276,10 +264,4 @@ Again it is worth watching the output closely and seeing if there are any expect
 As before feel free to run it twice, note how the output changes as the idempotent teardown has nothing to do on the 2nd pass.
 In fact you should expect to see `changed=0` in the output of the second pass for all hosts. 
 
-
-== Next Steps
-
-Now move onto Part 3 and make your first pass through at refactoring your deployer, `main.yml`.
-
-Now your environment is fully configured and ready to run. Move onto link:/post/ansible-refactoring-series-part3[Part 3: First Refator]
 

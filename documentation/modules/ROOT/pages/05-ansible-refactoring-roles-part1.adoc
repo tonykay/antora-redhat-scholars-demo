@@ -1,19 +1,4 @@
----
-title: "Ansible Refactoring Part 4 - Roles Refactor First Pass"
-date: "2020-08-10"
-linktitle: Ansible Refactoring Series
-slug: "ansible-refactoring-series-part4"
-thumbnail: "images/terminal-refactor-80x12.png"
-categories:
-  - Ansible
-tags:
-  - ansible
-  - refactor
----
-
-== Part 4 - Roles Refactor
-
-This is Part 4 of an Ansible Refactoring Series - link:/post/ansible-refactoring-series[Start Here] 
+== Roles Refactor
 
 In our second pass through the project we will take the now more modular solution a step further and break it into roles. 
 In this case we will basically map each of the 3 playbooks from Part 3 into 1 role each

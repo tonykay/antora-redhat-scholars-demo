@@ -1,19 +1,5 @@
----
-title: "Ansible Refactoring Part 3 - First Refactor"
-date: "2020-07-23"
-linktitle: Ansible Refactoring Series
-slug: "ansible-refactoring-series-part3"
-thumbnail: "images/terminal-refactor-80x12.png"
-categories:
-  - Ansible
-tags:
-  - ansible
-  - refactor
----
+== First Refactor
 
-== Part 3 - First Refactor
-
-This is Part 3 of an Ansible Refactoring Series - link:/post/ansible-refactoring-series[Start Here] 
 
 In our first pass through the project we will just focus on breaking it up into more modular components, breaking apart the variables from the code, and cleaning up the base directory by moving out any files or templates into sub-directories.
 If you are link:https://www.jeffgeerling.com/[Jeff Geerling] and very comfortable with writing *roles* and *collections* then this part can be skipped!
@@ -27,7 +13,8 @@ If you are link:https://www.jeffgeerling.com/[Jeff Geerling] and very comfortabl
 .. Move any templates into a `./templates` directory *and* update playbooks
 .. Move any files (e.g. used by `copy` module or similar) into a `./files` directory *and* update playbooks
 
-=== Plan of Attack
+[#approach]
+=== Refactor Approach
 
 . Make a refactor `git` branch
 +
@@ -198,6 +185,7 @@ git commit -m "Refactored and removed main.yml to site.yml"
 +
 TIP: You can check on your changes and state with `git status` and view the commit history with `git log`
 
+[#variables]
 == Refactoring the Variables
 
 It is, generally, a bad practice to store code and configuration together, and your 3 playbooks are full of variables.
@@ -364,6 +352,7 @@ Date:   Tue Jul 21 13:30:19 2020 -0600
 +
 *Notice* you also see my own earlier commits in the history prior to your own work
 
+[#templates]
 == Clean Up your Templates
 
 The root directory of your project is a bit cluttered, including several template files.
@@ -527,4 +516,3 @@ Meanwhile it can be found link:https://github.com/tonykay/solution_ansible_flask
 Congratulations, you know have a cleaner codebase that is more modular and easier to maintain.
 However it is still a bit "clunky" and it would be awkward for another team to _"borrow"_ say your Postgres playbook.
 
-In Part 4 we will look more closely at `roles` and both convert the bulk of `provision_database_tier.yml` into a role and also look to see if someone else has already written a good HAProxy role on link:https://galaxy.ansible.com/[Ansible Galaxy]

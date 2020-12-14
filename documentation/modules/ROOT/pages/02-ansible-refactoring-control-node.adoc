@@ -1,29 +1,4 @@
----
-title: "Ansible Refactoring Part 1 - Setting up your Control Node"
-date: "2020-07-19"
-linktitle: Ansible Refactoring Series - Breaking up the Monolith"
-slug: "ansible-refactoring-series-part1"
-thumbnail: "images/terminal-refactor-80x12.png"
-categories:
-  - Ansible
-tags:
-  - ansible
-  - refactor
----
-
-////
-++++
-<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-++++
-
-Trying tip icon etc
-:icons: font
-
-////
-
-== Part 1 - Getting Started
-
-This is Part 1 of an Ansible Refactoring Series - link:/post/ansible-refactoring-series[Start Here] 
+== Getting Started
 
 To follow along I assume you have access to a lab environment suitable for the task. I will add, July 2020, a `Vagrantfile` to simplify running this locally on your laptop. 
 Meanwhile this can be deployed via the brand new link:https://github.com/redhat-cop/agnosticd/tree/development/ansible/configs/ansible-multitier-infra[Ansible Multitier Infra Config] assuming you have AWS credentials or OpenStack.
