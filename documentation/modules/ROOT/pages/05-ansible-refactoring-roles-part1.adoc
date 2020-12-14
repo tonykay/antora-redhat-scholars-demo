@@ -10,7 +10,7 @@ In this case we will basically map each of the 3 playbooks from Part 3 into 1 ro
 .. Copy the tasks from your playbook into the roles `tasks/main.yml`
 .. Consider moving some/all vars into the roles `defaults/main.yml` or `vars/main.yml`
 
-
+[#postgres2role]
 === Turning the Postgres Play into a Role
 
 We will start here and document the steps for our first role. The remainimg 2 roles for `flask` and `HAProxy` will basically repeat the same pattern.
@@ -215,6 +215,7 @@ ansible-playbook teardown-app.yml
 ansible-playbook site.yml
 ----
 
+[#solution]
 === Solution
 
 One possible solution can be seen here in the solution `refactor-pass-02-roles` branch, either:

@@ -17,3 +17,5 @@
 
 
 * xref:05-ansible-refactoring-roles-part1.adoc[5. Moving to Roles Part 1]
+** xref:05-ansible-refactoring-roles-part1.adoc#postgres2role[Convert Postgres Play to Role]
+** xref:05-ansible-refactoring-roles-part1.adoc#solution[Solution]
