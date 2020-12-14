@@ -3,18 +3,25 @@
 :!sectids:
 
 [.text-center.strong]
-== Publish Services to Kubernetes
+== An Introduction to Refactoring Ansible
 
-A Kubernetes tutorial to show how you can deploy a Java service to a Kubernetes cluster as it was a child game.
+An Ansible Refactoring Series - from monolithic Playbook to Ansible Collections and Roles
 
 [.tiles.browse]
 == Browse modules
 
 [.tile]
 .xref:01-setup.adoc[Get Started]
-* xref:01-setup.adoc#minikube[Minikube]
+* xref:01-setup.adoc#sneakpreview[Sneak Preview]
 
 [.tile]
 .xref:02-deploy.adoc[Deploying]
 * xref:02-deploy.adoc#package[Package the Application]
 * xref:02-deploy.adoc#deploy[Deploy the Application]
+01-setup.adoc
+01-setup.adoc.bak
+02-ansible-refactoring-series.adoc
+02-deploy.adoc.bak
+03-ansible-refactoring-series.adoc
+04-ansible-refactoring-series.adoc
+05-ansible-refactoring-series.adoc

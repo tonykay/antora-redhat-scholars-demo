@@ -1,29 +1,33 @@
-= Setup
-include::_attributes.adoc[]
+== Refactoring Ansible Modularity, Reuse, and Maintainability
 
-[#prerequisite]
-== Prerequisite CLI tools
+In this series I want to explore refactoring a good, or at least _decent_, monolithic application deployment playbook into something more modular, easier to maintain, and with simpler and better reusability
+We'll start by validating it works before our first pass at simply breaking it into more modular playbooks and separating out the variables.
 
-include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/prerequisites-kubernetes.adoc[]
-|===
+Moving on we'll identify what if any components would be be better off suited to roles and consider using one or more existing roles from link:https://galaxy.ansible.com[Ansible Galaxy] if appropriate.
+Finally we'll turn our attention to the *Postgresql* component and look at how we could move this into an Ansible Collection, and if this makes sense.
 
-include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/optional-requisites.adoc[]
-|===
+* link:02-ansible-refactoring-series.html[Part 1 - Setting up your Control Node]
+* link:03-ansible-refactoring-series.html[Part 2 - First Deploy]
+* link:04-ansible-refactoring-series.html[Part 3 - First Refactor]
+* link:05-ansible-refactoring-series.html[Part 4 - Roles Refactor First Pass]
 
-[#minikube]
-== Setup Kubernetes
 
-:profile: my_profile
+[#sneakpreview]
+== Sneak Preview
 
-include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/kubernetes-setup.adoc[]
+=== The Infrastructure
 
-And then you are ready for start using Kubernetes:
+A simple multi-tier infrastructure with a load-balancer (HAProxy) acting as a front end to 2 app servers running a flask application using Postgres as its persistance datastore.
 
-image::kubelogo.png[]
+* link:https://github.com/tonykay/ansible_flask_app_loader_all_in_one.git[The Deployer Repo (github)] - your job is to refactor this
 
-[#downloadtutorial]
-== Get tutorial sources
+image::ntier-topology.png[role="thumb center" width=100%]
 
-:tutorial-url: https://github.com/redhat-developer-demos/rhd-tutorial-common.git
-:folder: my_folder
-include::https://raw.githubusercontent.com/redhat-developer-demos/rhd-tutorial-common/master/download-sources.adoc[]
+=== The Application
+
+* link:https://github.com/tonykay/resource_hub.git[The Application (github)] - what is being deployed onto the _app tier_
+
+image::ntier-app-topology.png[role="thumb center" width=100%]
+
+Time to get started with link:02-ansible-refactoring-series.html[Setting up your Control Node]
+
