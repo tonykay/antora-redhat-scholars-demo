@@ -36,6 +36,7 @@ For Red Hatters and Partners this is available via CloudForms at link:https://la
 Automation -> Ansible Advanced NG - Multi Tier Babylon*
 You will receive 3 emails during the provisioning process, the last of which will contain your `ssh` login details.
 
+[#environment]
 === Your Environment
 
 The lab environment consists of four servers and a control node.
@@ -129,6 +130,7 @@ and check to make sure that only the key(s) you wanted were added.
 Now try logging into the machine, with:   "ssh 'tok@control.ntier-infra-01.example.opentlc.com'"
 and check to make sure that only the key(s) you wanted were added.
 
+[#connect]
 === Connect to your control node
 
 . `ssh` either with your username/password or key
@@ -163,6 +165,7 @@ It would also be possible to add yourself the `devops` users `~/.ssh/authorized_
 sudo su - devops
 ----
 
+[#explore]
 == Explore your environment
 
 . Check your basic toolchain is in place. At a minimum you will need `ansible` and `git`

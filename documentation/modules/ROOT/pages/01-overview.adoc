@@ -12,9 +12,7 @@ Finally we'll turn our attention to the *Postgresql* component and look at how w
 * link:05-ansible-refactoring-series.html[Part 4 - Roles Refactor First Pass]
 
 
-[#sneakpreview]
-== Sneak Preview
-
+[#infrastucture]
 === The Infrastructure
 
 A simple multi-tier infrastructure with a load-balancer (HAProxy) acting as a front end to 2 app servers running a flask application using Postgres as its persistance datastore.
@@ -23,6 +21,7 @@ A simple multi-tier infrastructure with a load-balancer (HAProxy) acting as a fr
 
 image::ntier-topology.png[role="thumb center" width=100%]
 
+[#application]
 === The Application
 
 * link:https://github.com/tonykay/resource_hub.git[The Application (github)] - what is being deployed onto the _app tier_
